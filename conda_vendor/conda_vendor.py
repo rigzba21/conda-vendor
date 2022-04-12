@@ -105,7 +105,7 @@ def get_specs(lock_spec) -> List[str]:
 
 
 # Only return packages in the FETCH action, which
-# include all the entries form the packages repodata.json
+# include all the entries from the packages repodata.json
 def get_fetch_actions(solver, platform, dry_run_install) -> List[FetchAction]:
     patched_dry_run_install = patch_link_actions(solver, platform, dry_run_install)
     fetch_actions = patched_dry_run_install["actions"]["FETCH"]
